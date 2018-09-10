@@ -6,5 +6,5 @@ class Utils:
     
     @staticmethod
     def clear():
-        os.system('clear')
+        os.system('cls')
         

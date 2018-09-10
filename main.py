@@ -1,17 +1,12 @@
-
-
 from utils import Utils
-from MenueItem import MenueItem 
-from Employee import EmployeeSection
+from menu import menu
+from menuItem import menuItem
+from employeeSection import employeeSection
 
 sections = {
-    0:MenueItem('(0) Employees',EmployeeSection()),
-    1:MenueItem('(1) Departments') 
-    }
+    1: menuItem('(1) Employees', employeeSection),
+}
+employees = {}
 
-for section in  sections:
-    section.render()
-
-# selectedSection = int(input('Select Section: '))
-# if  selectedSection == 1:
-#     section[1]
+sectionsMenu = menu(sections, '== Company ==')
+sectionsMenu.activateMenu()
